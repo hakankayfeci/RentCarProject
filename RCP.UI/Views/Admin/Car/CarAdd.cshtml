@@ -1,0 +1,181 @@
+﻿@model RCP.UI.ViewModel.CarViewModel
+
+@{
+    ViewBag.Title = "Araba Ekle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4>Araba Ekle</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.Partial("MessagePartial", TempData["Mesaj"])
+
+    <div class="form-group">
+        <label class=" col-md-2">Araba Modeli</label>
+        <div class="col-md-10">
+            <input type="text" name="Model" border="1" class="form-control alert-light" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class=" col-md-2">Araba Markası</label>
+        <div class="col-md-10">
+            <select name="Brand" border="1" class="form-control alert-light">
+                <option value="Alfa Romeo">Alfa Romeo</option>
+                <option value="Audi">Audi</option>
+                <option value="BMW">BMW</option>
+                <option value="Citroen">Citroen</option>
+                <option value="Chevrolet">Chevrolet</option>
+                <option value="Dacia">Dacia</option>
+                <option value="Fiat">Fiat</option>
+                <option value="Ford">Ford</option>
+                <option value="Honda">Honda</option>
+                <option value="Hyundai">Hyundai</option>
+                <option value="BMW">BMW</option>
+                <option value="BMW">BMW</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class=" col-md-2">Araba Yılı</label>
+        <div class="col-md-10">
+            <input type="date" name="Year" border="1" class="form-control alert-light" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class=" col-md-2">Araba Motoru</label>
+        <div class="col-md-10">
+            <input type="text" name="Engine" border="1" class="form-control alert-light" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class=" col-md-2">Araba'nın Serisi</label>
+        <div class="col-md-10">
+            <input type="text" name="Sherry" border="1" class="alert-light" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class=" col-md-2">Araba Yakıtı</label>
+        <div class="col-md-10">
+            <select name="Fuel" border="1" class="form-control alert-light">
+                <option value="Benzin">Benzin</option>
+                <option value="Benzin & LPG">Benzin & LPG</option>
+                <option value="Dizel">Dizel</option>
+            </select>
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class=" col-md-2">Vites</label>
+
+        <div class="col-md-10">
+            <select name="Gear" border="1" class="form-control alert-light">
+                <option value="Manuel">Manuel</option>
+                <option value="Otomatik">Otomatik</option>
+                <option value="Yarı Otomatik">Yarı Otomatik</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2">KM</label>
+
+        <div class="col-md-10">
+            <input type="text" name="Km" border="1" class="form-control alert-light" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class=" col-md-2">Kasa Tipi</label>
+
+        <div class="col-md-10">
+            <select name="CaseType" border="1" class="form-control alert-light">
+                <option value="Cabrio">Cabrio</option>
+                <option value="Coupe">Coupe</option>
+                <option value="Hatchback 3 kapı">Hatchback 3 kapı</option>
+                <option value="Hatchback 5 kapı">Hatchback 5 kapı</option>
+                <option value="Sedan">Sedan</option>
+
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class=" col-md-2">Motor Gücü</label>
+
+        <div class="col-md-10">
+            <input type="text" name="EnginePower" border="1" class="form-control alert-light" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class=" col-md-2">Araba Rengi</label>
+
+        <div class="col-md-10">
+            <select name="Color" border="1" class="form-control alert-light">
+                <option value="Beyaz">Beyaz</option>
+                <option value="Bordo">Bordo</option>
+                <option value="Kırmızı">Kırmızı</option>
+                <option value="Mavi">Mavi</option>
+                <option value="Gri">Gri</option>
+                <option value="Siyah">Siyah</option>
+
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class=" col-md-2">Çekiş</label>
+        <div class="col-md-10">
+            <input type="checkbox" name="Traction" value="" />Önden Çekişli <br />
+            <input type="checkbox" name="Traction" value="" />Arkadan Çekişli
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class=" col-md-2">Garanti Durumu</label>
+
+        <div class="col-md-10">
+            <div class="checkbox">
+                <input type="checkbox" name="Waranty" value="" />Aktif <br />
+                <input type="checkbox" name="Waranty" value="" />Pasif
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class=" col-md-2">Araba Plaka</label>
+        <div class="col-md-10">
+            <input type="checkbox" name="CarPlate" value="" />Türkiye(TR) Plakalı <br />
+            <input type="checkbox" name="CarPlate" value="" />Yabancı Plakalı
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class=" col-md-2">Araba Resimi</label>
+        <div class="col-md-10">
+            <input type="url" name="Photo" value="" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-primary border-dark" />
+        </div>
+    </div>
+</div>
+}
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

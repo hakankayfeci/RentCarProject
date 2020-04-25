@@ -1,0 +1,105 @@
+﻿@model RCP.Model.Contact
+@{
+    ViewBag.Title = "iletisim";
+}
+
+
+<!--== Page Title Area Start ==-->
+<section id="page-title-area" class="section-padding overlay">
+    <div class="container">
+        <div class="row">
+            <!-- Page Title Start -->
+            <div class="col-lg-12">
+                <div class="section-title  text-center">
+                    <h2>Bİze Ulaşın</h2>
+                    <span class="title-line"><i class="fa fa-phone"></i></span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <!-- Page Title End -->
+        </div>
+    </div>
+</section>
+<!--== Page Title Area End ==-->
+<!--== Contact Page Area Start ==-->
+<div class="contact-page-wrao section-padding">
+    <div class="container">
+        @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { @class = "well form-horizontal" }))
+        {
+            <fieldset>
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <!-- Form Name -->
+                <legend></legend>
+                <div class="">
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Adı Soyadı</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                @Html.TextBoxFor(model => model.NameSurname, new { @class = "form-control", placeholder = "Adınız Soyadınız" })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.NameSurname, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Email</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "Email Adresiniz" })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Başlık</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-comment"></i></span>
+                                @Html.TextBoxFor(model => model.Title, new { @class = "form-control", placeholder = "Konu Başlığı Giriniz" })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <!-- Text area -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Mesajınız</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-send"></i></span>
+                                @Html.TextAreaFor(model => model.Message, new { @class = "form-control", placeholder = "Mesajınız" })
+
+                            </div>
+                            @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    @if (TempData["Success"] != null)
+                    {
+                        <!-- Success message -->
+                        <div class="alert col-md-4 alert-success" role="alert" id="success_message">
+                            Gönderildi <i class="fa fa-thumbs-up"></i>@TempData["Success"]
+                        </div>
+                    }
+                    <!-- Button -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label"></label>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-warning">Gönder <span class="fa fa-send"></span></button>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        }
+
+
+
+    </div>
+</div>
+<!--== Contact Page Area End ==-->
+<!--== Map Area Start ==-->
+<div class="maparea">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12033.146712715128!2d28.982462416436263!3d41.06272582060288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab6e2282f7a95%3A0x745b3d933ec469ed!2s%C4%B0stanbul%20Adalet%20Saray%C4%B1!5e0!3m2!1str!2str!4v1575045597571!5m2!1str!2str" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+</div>
+<!--== Map Area End ==-->

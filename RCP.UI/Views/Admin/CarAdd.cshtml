@@ -1,0 +1,183 @@
+﻿@model RCP.UI.ViewModel.CarViewModel
+@using RCP.UI.Model
+@{
+    ViewBag.Title = "Araba Ekle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<form action="/Admin/CarAdd" method="post">
+
+    <div class="form-horizontal">
+        <h4>Araba Ekle</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.Partial("MessagePartial", TempData["Mesaj"])
+
+        <div class="form-group">
+            <label class=" col-md-2">Araba Modeli</label>
+            <div class="col-md-10">
+                <input type="text" name="Model" border="1" class="form-control alert-light" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class=" col-md-2">Araba Markası</label>
+            <div class="col-md-10">
+
+                <select name="Brand" border="1" class="form-control alert-light">
+                    @foreach (var item in ViewBag.Markalar)
+                    {
+                        <option value="@item">@item</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class=" col-md-2">Araba Yılı</label>
+            <div class="col-md-10">
+                <input type="date" name="Year" border="1" class="form-control alert-light" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class=" col-md-2">Araba Motoru</label>
+            <div class="col-md-10">
+                <input type="text" name="Engine" border="1" class="form-control alert-light" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class=" col-md-2">Araba Günlük Kira Fiyatı</label>
+            <div class="col-md-10">
+                <input type="text" name="Price" border="1" class="form-control alert-light" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class=" col-md-2">Araba'nın Serisi</label>
+            <div class="col-md-10">
+                <input type="text" name="Sherry" border="1" class=" form-control alert-light" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class=" col-md-2">Araba Yakıtı</label>
+            <div class="col-md-10">
+                <select name="Fuel" border="1" class="form-control alert-light">
+                    <option value="Benzin">Benzin</option>
+                    <option value="Benzin & LPG">Benzin & LPG</option>
+                    <option value="Dizel">Dizel</option>
+                </select>
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class=" col-md-2">Vites</label>
+
+            <div class="col-md-10">
+                <select name="Gear" border="1" class="form-control alert-light">
+                    <option value="Manuel">Manuel</option>
+                    <option value="Otomatik">Otomatik</option>
+                    <option value="Yarı Otomatik">Yarı Otomatik</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2">KM</label>
+
+            <div class="col-md-10">
+                <input type="text" name="Km" border="1" class="form-control alert-light" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class=" col-md-2">Kasa Tipi</label>
+
+            <div class="col-md-10">
+                <select name="CaseType" border="1" class="form-control alert-light">
+                    <option value="Cabrio">Cabrio</option>
+                    <option value="Coupe">Coupe</option>
+                    <option value="Hatchback 3 kapı">Hatchback 3 kapı</option>
+                    <option value="Hatchback 5 kapı">Hatchback 5 kapı</option>
+                    <option value="Sedan">Sedan</option>
+
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class=" col-md-2">Motor Gücü</label>
+
+            <div class="col-md-10">
+                <input type="text" name="EnginePower" border="1" class="form-control alert-light" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class=" col-md-2">Araba Rengi</label>
+
+            <div class="col-md-10">
+                <select name="Color" border="1" class="form-control alert-light">
+                    <option value="Beyaz">Beyaz</option>
+                    <option value="Bordo">Bordo</option>
+                    <option value="Kırmızı">Kırmızı</option>
+                    <option value="Mavi">Mavi</option>
+                    <option value="Gri">Gri</option>
+                    <option value="Siyah">Siyah</option>
+
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class=" col-md-2">Araba Çekişi</label>
+
+            <div class="col-md-10">
+                <select name="Traction" border="1" class="form-control alert-light">
+                    <option value="Önden Çekişli">Önden Çekişli</option>
+                    <option value="Arkadan Çekişli">Arkadan Çekişli</option>
+
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2">Garanti Durumu</label>
+
+            <div class="col-md-10 ">
+                <select name="Waranty" class="form-control alert-light">
+                    <option value="1">Onaylı</option>
+                    <option value="0">Onaylı Değil</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2">Araba Plakası</label>
+
+            <div class="col-md-10 ">
+                <select name="Waranty" class="form-control alert-light">
+                    <option value="TR">TR Plakalı</option>
+                    <option value="Other">Yabancı Plakalı</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class=" col-md-2">Araba Resimi</label>
+            <div class="col-md-10">
+                <input type="text" name="Photo" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-primary border-dark" />
+            </div>
+        </div>
+    </div>
+    </form>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

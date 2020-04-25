@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RCP.Model", "RCP.Model\RCP.Model.csproj", "{4FD0F36C-0BF5-435D-84E1-7D6153B9CE70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RCP.DL", "RCP.DL\RCP.DL.csproj", "{78AA2A83-CA2B-4CFD-BB74-B8EC5D563E8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RCP.UI", "RCP.UI\RCP.UI.csproj", "{82DE8085-723D-4949-845A-9EEFB72DEBF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RCP.BL", "RCP.BL\RCP.BL.csproj", "{7676ED2E-0D59-4D4F-AE35-F9BEB8BB23E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FD0F36C-0BF5-435D-84E1-7D6153B9CE70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FD0F36C-0BF5-435D-84E1-7D6153B9CE70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FD0F36C-0BF5-435D-84E1-7D6153B9CE70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FD0F36C-0BF5-435D-84E1-7D6153B9CE70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78AA2A83-CA2B-4CFD-BB74-B8EC5D563E8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78AA2A83-CA2B-4CFD-BB74-B8EC5D563E8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78AA2A83-CA2B-4CFD-BB74-B8EC5D563E8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78AA2A83-CA2B-4CFD-BB74-B8EC5D563E8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82DE8085-723D-4949-845A-9EEFB72DEBF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82DE8085-723D-4949-845A-9EEFB72DEBF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82DE8085-723D-4949-845A-9EEFB72DEBF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82DE8085-723D-4949-845A-9EEFB72DEBF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7676ED2E-0D59-4D4F-AE35-F9BEB8BB23E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7676ED2E-0D59-4D4F-AE35-F9BEB8BB23E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7676ED2E-0D59-4D4F-AE35-F9BEB8BB23E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7676ED2E-0D59-4D4F-AE35-F9BEB8BB23E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {650BE5B5-3F31-4FF3-B861-2D123ABBAB1B}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/hakan1181
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = RCP.Model\\RCP.Model.csproj
+		SccProjectName1 = RCP.Model
+		SccLocalPath1 = RCP.Model
+		SccProjectUniqueName2 = RCP.DL\\RCP.DL.csproj
+		SccProjectName2 = RCP.DL
+		SccLocalPath2 = RCP.DL
+		SccProjectUniqueName3 = RCP.UI\\RCP.UI.csproj
+		SccProjectName3 = RCP.UI
+		SccLocalPath3 = RCP.UI
+		SccProjectUniqueName4 = RCP.BL\\RCP.BL.csproj
+		SccProjectName4 = RCP.BL
+		SccLocalPath4 = RCP.BL
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,74 @@
+﻿
+@{
+                /**/
+
+                ViewBag.Title = "Giriş Yap";
+}
+
+
+<!--== Page Title Area Start ==-->
+<section id="page-title-area" class="section-padding overlay">
+    <div class="container">
+        <div class="row">
+            <!-- Page Title Start -->
+            <div class="col-lg-12">
+                <div class="section-title  text-center">
+                    <h2>Giriş Yap</h2>
+                    <span class="title-line"><i class="fa fa-car"></i></span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <!-- Page Title End -->
+        </div>
+    </div>
+</section>
+<!--== Page Title Area End ==-->
+<!--== Login Page Content Start ==-->
+<section id="lgoin-page-wrap" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-8 m-auto">
+                <div class="login-page-content">
+                    <div class="login-form">
+                        <h3>Hoşgeldiniz</h3>
+                        @Html.Partial("MessagePartial", TempData["Mesaj"])
+                        <form action="/User/Login" method="post">
+                            <div class="username">
+                                <input type="text" name="Username" placeholder="E-Posta Yada Kullanıcı Adı">
+                            </div>
+                            <div class="password">
+                                <input name="Password" type="password" placeholder="Şifre">
+                            </div>
+                            <div class="log-btn">
+                                <button type="submit"><i class="fa fa-sign-in"></i> Giriş Yap</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="login-other">
+                        <span class="or">or</span>
+                        <a href="#" class="login-with-btn facebook"><i class="fa fa-facebook"></i>Facebook İle Giriş Yap</a>
+                        <a href="#" class="login-with-btn google"><i class="fa fa-google"></i> Google İle Giriş Yap</a>
+                    </div>
+                    <div class="create-ac">
+                        <p>Hesabınız Yok Mu ? <a href="/Kayitol">Kayıt Ol</a></p>
+                    </div>
+                    <div class="login-menu">
+                        <a href="/Hakkimizda">Hakkımızda</a>
+                        <span>|</span>
+                        <a href="/İletisim">İletişim</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--== Login Page Content End ==-->
+<script>
+    function checkLoginState() {
+        FB.getLoginStatus(function (response) {
+            statusChangeCallback(response);
+        });
+    }
+</script>
+

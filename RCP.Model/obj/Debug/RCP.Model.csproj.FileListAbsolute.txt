@@ -1,0 +1,12 @@
+C:\Projects\RentCarProject\RentCarProject\RCP.Model\bin\Debug\RCP.Model.dll
+C:\Projects\RentCarProject\RentCarProject\RCP.Model\bin\Debug\RCP.Model.pdb
+C:\Projects\RentCarProject\RentCarProject\RCP.Model\obj\Debug\RCP.Model.csproj.CoreCompileInputs.cache
+C:\Projects\RentCarProject\RentCarProject\RCP.Model\obj\Debug\RCP.Model.dll
+C:\Projects\RentCarProject\RentCarProject\RCP.Model\obj\Debug\RCP.Model.pdb
+C:\Projects\RentCarProject\RentCarProject\RCP.Model\bin\Debug\RCP.Model.dll.config
+C:\Projects\RentCarProject\RentCarProject\RCP.Model\bin\Debug\EntityFramework.dll
+C:\Projects\RentCarProject\RentCarProject\RCP.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projects\RentCarProject\RentCarProject\RCP.Model\bin\Debug\EntityFramework.xml
+C:\Projects\RentCarProject\RentCarProject\RCP.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projects\RentCarProject\RentCarProject\RCP.Model\obj\Debug\RCP.Model.csproj.CopyComplete
+C:\Projects\RentCarProject\RentCarProject\RCP.Model\obj\Debug\RCP.Model.csprojAssemblyReference.cache

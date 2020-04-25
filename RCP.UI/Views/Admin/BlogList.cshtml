@@ -1,0 +1,56 @@
+﻿@model IEnumerable<RCP.Model.Blog>
+
+@{
+    ViewBag.Title = "BlogList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Bloglarım</h2>
+
+<p>
+    @Html.ActionLink("Yeni Oluştur", "Admin/BlogAdd")
+</p>
+<table class="table table-striped">
+    <thead class="thead-dark">
+
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RegisterDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Content)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Star)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RegisterDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Content)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Star)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "BlogUpdate", new { id=item.Id },new { @class = "btn btn-success" }) |
+            @Html.ActionLink("Detay", "Detail","Blog",new { id=item.Id }, new { @class = "btn btn-info" }) |
+            @Html.ActionLink("Sil", "BlogDelete", new { id=item.Id }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>
+

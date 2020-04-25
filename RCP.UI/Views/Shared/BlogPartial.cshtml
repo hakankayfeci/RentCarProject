@@ -1,0 +1,40 @@
+﻿
+@model IEnumerable<RCP.UI.ViewModel.BlogViewModel>
+
+@foreach (var item in Model)
+{
+    <div class="col-lg-12">
+        <article class="single-article">
+            <div class="row">
+                <!-- Articles Thumbnail Start -->
+                <div class="col-lg-5">
+                    <div class="article-thumb">
+                        <img src="@item.Photo" alt="JSOFT">
+                    </div>
+                </div>
+                <!-- Articles Thumbnail End -->
+                <!-- Articles Content Start -->
+                <div class="col-lg-7">
+                    <div class="display-table">
+                        <div class="display-table-cell">
+                            <div class="article-body">
+                                <h3><a href="article-details.html">@item.Title</a></h3>
+                                <div class="article-meta">
+                                    <a href="#" class="author">Tarafından :@item.Users.Username <span></span></a>
+                                    <a href="#" class="commnet">Yorumlar : @item.CommentCount </a>
+                                </div>
+
+                                <div class="article-date">@item.RegisterDate.Year <span class="month">@item.RegisterDate.Month</span><span class="today">@item.RegisterDate.Day</span></div>
+
+                                <p>@item.Content</p>
+
+                                <a href="/Blog/Detail/@item.Id" class="readmore-btn">Daha Fazlası İçin <i class="fa fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Articles Content End -->
+            </div>
+        </article>
+    </div>
+}
